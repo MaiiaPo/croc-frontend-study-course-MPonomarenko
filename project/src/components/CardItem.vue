@@ -1,3 +1,12 @@
+<script setup>
+
+const props = defineProps({
+  name: { type: String, required: true },
+  proff: { type: String, required: true },
+  avatar: { type: String, required: true },
+})
+</script>
+
 <template>
   <div class="card">
     <a href="#" class="card__img-block">
@@ -6,13 +15,13 @@
         <path fill="#8f8f8f" d="M19 4h-3.5l-1-1h-5l-1 1H5v2h14M6 19a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V7H6z" />
       </svg>
       <div class="card__img-dark">
-        <img class="card__img" src="/avatar_einstein.jpg" alt="avatar">
+        <img class="card__img" :src="props.avatar" alt="avatar">
       </div>
     </a>
     <div class="card__info-block">
       <div class="card__info">
-        <p class="card__info-name">Альберд Эйнштейн</p>
-        <p class="card__info-proff">Физик-теоретик</p>
+        <p class="card__info-name">{{ props.name }}</p>
+        <p class="card__info-proff">{{ props.proff }}</p>
       </div>
       <div class="card__buttons">
         <div>
@@ -37,10 +46,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-
-</script>
 
 <style scoped>
 .card__img-block {

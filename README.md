@@ -31,9 +31,3 @@
 	1.  Создание пустого репозитория с названием "croc-frontend-study-course-{yourName}" на GitHub
 	2.  Клонирование репозитория курса в папку на ПК: команда в терминале 'git clone https://github.com/MaiiaPo/croc-frontend-study-course.git'
 	3.  Открываем папку с клонированным репозиторием в VS Code.
-	4. В терминале выполняем команду git remote -v для просмотра источника (должен быть https://github.com/MaiiaPo/croc-frontend-study-course.git)
-	5.  Меняем источник на свой созданный репозиторий и подгружаем туда данные:
-		1. git remote set-url origin {ссылка на созданный репозиторий в п.3}
-		2. git push -f
-		3. git remote -v (проверяем, что источник репозиторий из п.3)
-
